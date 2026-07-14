@@ -31,7 +31,7 @@ predictbutton = st.button("Predict the review")
 
 st.divider()
 
-model = joblib.load("mlmodel.pkl")
+model = joblib.load(BASE_DIR / "mlmodel.pkl")
 
 bookingstatus = 1 if tablebooking == "Yes" else 0
 
