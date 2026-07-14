@@ -166,12 +166,17 @@ hr {
 @st.cache_data
 def load_data():
     csv_path = BASE_DIR / "Avi.csv"
+
     st.write("CSV Path:", csv_path)
     st.write("CSV Exists:", csv_path.exists())
-    data = pd.read_csv(csv_path)
 
-    df = load_data()
+    data = pd.read_csv(csv_path)
     return data
+
+
+# LOAD DATASET
+
+df = load_data()
 
 
 
