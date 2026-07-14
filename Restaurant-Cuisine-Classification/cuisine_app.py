@@ -85,7 +85,7 @@ hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, 
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv("Avi.csv")
+    data = pd.read_csv(os.path.join(BASE_DIR, "Avi.csv"))
     data = data.dropna(subset=["Cuisines"])
     numeric_cols = ["Average Cost for two", "Price range", "Votes"]
     for col in numeric_cols:
