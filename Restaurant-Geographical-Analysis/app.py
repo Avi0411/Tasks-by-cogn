@@ -163,14 +163,13 @@ hr {
 
 # LOADING DATASET
 
-import os
-
-st.write("Current Directory:", BASE_DIR)
-st.write("Files in folder:", os.listdir(BASE_DIR))
 @st.cache_data
 def load_data():
     csv_path = BASE_DIR / "Avi.csv"
+    st.write("CSV Path:", csv_path)
+    st.write("CSV Exists:", csv_path.exists())
     data = pd.read_csv(csv_path)
+    
     return data
 
 
