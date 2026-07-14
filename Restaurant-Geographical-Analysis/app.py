@@ -163,14 +163,17 @@ hr {
 
 # LOADING DATASET
 
-@st.cache_data
+import os
+
+st.write("Current Directory:", BASE_DIR)
+st.write("Files in folder:", os.listdir(BASE_DIR))
 @st.cache_data
 def load_data():
     csv_path = BASE_DIR / "Avi.csv"
     data = pd.read_csv(csv_path)
     return data
 
-df = load_data()
+
 
 # ====================================================
 # HERO HEADER
