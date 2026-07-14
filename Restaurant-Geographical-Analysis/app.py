@@ -170,7 +170,7 @@ def load_data():
     st.write("CSV Exists:", csv_path.exists())
     data = pd.read_csv(csv_path)
 
-df = load_data()
+    df = load_data()
     return data
 
 
