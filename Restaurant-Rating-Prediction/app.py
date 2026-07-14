@@ -11,15 +11,11 @@ BASE_DIR = Path(__file__).resolve().parent
 scaler = joblib.load(BASE_DIR / "Scaler.pkl")
 model = joblib.load(BASE_DIR / "mlmodel.pkl")
 
-
-st.set_page_config(layout = "wide")
-
-scaler = joblib.load("Scaler.pkl")
+st.set_page_config(layout="wide")
 
 st.title("Restaurant Rating Prediction App")
 
-
-st.caption("This apps helps you to predict a restaurant review class")
+st.caption("This app helps you predict a restaurant rating.")
 
 st.divider()
 
