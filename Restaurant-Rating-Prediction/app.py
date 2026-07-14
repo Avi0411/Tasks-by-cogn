@@ -1,7 +1,15 @@
 import streamlit as st
 import numpy as np
 from sklearn.preprocessing import StandardScaler
+from pathlib import Path
 import joblib
+
+# Get the folder where app.py is located
+BASE_DIR = Path(__file__).resolve().parent
+
+# Load model files
+scaler = joblib.load(BASE_DIR / "Scaler.pkl")
+model = joblib.load(BASE_DIR / "mlmodel.pkl")
 
 
 st.set_page_config(layout = "wide")
