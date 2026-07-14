@@ -10,6 +10,8 @@ from sklearn.metrics import (
     accuracy_score, precision_score, recall_score, f1_score,
     classification_report, confusion_matrix
 )
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 # PAGE CONFIGURATION
