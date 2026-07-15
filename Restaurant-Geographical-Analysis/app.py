@@ -3,6 +3,9 @@ import pandas as pd
 import plotly.express as px
 import folium
 from streamlit_folium import st_folium
+from pathlib import Path
+import pandas as pd
+BASE_DIR = Path(__file__).resolve().parent
 
 # ====================================================
 # PAGE CONFIGURATION
@@ -162,11 +165,20 @@ hr {
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv("Avi.csv")
-    data = data.dropna(subset=["Latitude", "Longitude"])
+    csv_path = BASE_DIR / "Avi.csv"
+
+    st.write("CSV Path:", csv_path)
+    st.write("CSV Exists:", csv_path.exists())
+
+    data = pd.read_csv(csv_path)
     return data
 
+
+# LOAD DATASET
+
 df = load_data()
+
+
 
 # ====================================================
 # HERO HEADER

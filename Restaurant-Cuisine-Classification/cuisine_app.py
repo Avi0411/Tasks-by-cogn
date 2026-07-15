@@ -10,6 +10,8 @@ from sklearn.metrics import (
     accuracy_score, precision_score, recall_score, f1_score,
     classification_report, confusion_matrix
 )
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 # PAGE CONFIGURATION
@@ -83,7 +85,7 @@ hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, 
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv("Avi.csv")
+    data = pd.read_csv(os.path.join(BASE_DIR, "Avi.csv"))
     data = data.dropna(subset=["Cuisines"])
     numeric_cols = ["Average Cost for two", "Price range", "Votes"]
     for col in numeric_cols:

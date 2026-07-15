@@ -1,17 +1,20 @@
 import streamlit as st
 import numpy as np
-from sklearn.preprocessing import StandardScaler
+from pathlib import Path
 import joblib
 
+# Get the folder where app.py is located
+BASE_DIR = Path(__file__).resolve().parent
 
-st.set_page_config(layout = "wide")
+# Load model files
+scaler = joblib.load(BASE_DIR / "Scaler.pkl")
+model = joblib.load(BASE_DIR / "mlmodel.pkl")
 
-scaler = joblib.load("Scaler.pkl")
+st.set_page_config(layout="wide")
 
 st.title("Restaurant Rating Prediction App")
 
-
-st.caption("This apps helps you to predict a restaurant review class")
+st.caption("This app helps you predict a restaurant rating.")
 
 st.divider()
 
@@ -27,7 +30,7 @@ predictbutton = st.button("Predict the review")
 
 st.divider()
 
-model = joblib.load("mlmodel.pkl")
+model = joblib.load(BASE_DIR / "mlmodel.pkl")
 
 bookingstatus = 1 if tablebooking == "Yes" else 0
 
