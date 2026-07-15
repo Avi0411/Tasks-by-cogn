@@ -1,14 +1,14 @@
 # Cognifyz Internship — Machine Learning Tasks
 
-A collection of 3 Machine Learning tasks completed as part of the **Cognifyz Technologies** internship program, using restaurant data to build predictive models, classifiers, and geospatial visualizations — each with an interactive Streamlit dashboard.
+A collection of 3 Machine Learning tasks completed as part of the **Cognifyz Technologies** internship program, using restaurant data to build predictive models, classifiers, and geospatial visualizations — each with a live, interactive Streamlit dashboard.
 
 ## Live Dashboards
 
 | Task | Live App |
 |---|---|
-| Restaurant Rating Prediction | [Launch dashboard](https://your-app-url.streamlit.app) *(update once deployed)* |
-| Restaurant Cuisine Classification | [Launch dashboard](https://your-app-url.streamlit.app) *(update once deployed)* |
-| Restaurant Geographical Analysis | [Launch dashboard](https://your-app-url.streamlit.app) *(update once deployed)* |
+| Restaurant Rating Prediction | [Launch dashboard](https://tasks-by-cogn-rating.streamlit.app/) |
+| Restaurant Cuisine Classification | [Launch dashboard](https://tasks-by-cogn-cuisine.streamlit.app/) |
+| Restaurant Geographical Analysis | [Launch dashboard](https://tasks-by-cogn-geographical.streamlit.app/) |
 
 ## Tasks
 
@@ -65,7 +65,7 @@ Repeat with the corresponding folder and file for the other two tasks (`Restaura
 ## Project Structure
 
 ```
-Cog-Tasks/
+Tasks-by-cogn/
 ├── Restaurant-Rating-Prediction/
 │   ├── Notebook.ipynb
 │   ├── app.py
